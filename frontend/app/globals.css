@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-poppins: "Poppins", sans-serif;
+
+  --color-primary: #007DFA;
+  --color-muted: #999999;
+  --color-background: #FFFFFF;
+  --color-text: #000000;
+
+  --text-header1: 32px;
+  --text-header1--line-height: 1.4;
+  --text-header1--font-weight: 600;
+
+  --text-header2: 24px;
+  --text-header2--line-height: 1.4;
+  --text-header2--font-weight: 600;
+
+  --text-body1: 18px;
+  --text-body1--line-height: 1.5;
+  --text-body1--font-weight: 400;
+
+  --text-body2: 16px;
+  --text-body2--line-height: 1.5;
+  --text-body2--font-weight: 400;
+
+  --text-body2-semibold: 16px;
+  --text-body2-semibold--line-height: 1.5;
+  --text-body2-semibold--font-weight: 600;
+
+  --text-body-small: 14px;
+  --text-body-small--line-height: 1.5;
+  --text-body-small--font-weight: 400;
+
+  --text-body-small-medium: 14px;
+  --text-body-small-medium--line-height: 1.5;
+  --text-body-small-medium--font-weight: 500;
+
+  --text-body-small-semibold: 14px;
+  --text-body-small-semibold--line-height: 1.5;
+  --text-body-small-semibold--font-weight: 600;
+
+  --text-extra-small-regular: 12px;
+  --text-extra-small-regular--line-height: 1.5;
+  --text-extra-small-regular--font-weight: 400;
+}
+
+@layer utilities {
+  .text-header1 {
+    font-size: var(--text-header1);
+    line-height: var(--text-header1--line-height);
+    font-weight: var(--text-header1--font-weight);
+  }
+
+  .text-header2 {
+    font-size: var(--text-header2);
+    line-height: var(--text-header2--line-height);
+    font-weight: var(--text-header2--font-weight);
+  }
+
+  .text-body1 {
+    font-size: var(--text-body1);
+    line-height: var(--text-body1--line-height);
+    font-weight: var(--text-body1--font-weight);
+  }
+
+  .text-body2 {
+    font-size: var(--text-body2);
+    line-height: var(--text-body2--line-height);
+    font-weight: var(--text-body2--font-weight);
+  }
+
+  .text-body2-semibold {
+    font-size: var(--text-body2-semibold);
+    line-height: var(--text-body2-semibold--line-height);
+    font-weight: var(--text-body2-semibold--font-weight);
+  }
+
+  .text-body-small {
+    font-size: var(--text-body-small);
+    line-height: var(--text-body-small--line-height);
+    font-weight: var(--text-body-small--font-weight);
+  }
+
+  .text-body-small-medium {
+    font-size: var(--text-body-small-medium);
+    line-height: var(--text-body-small-medium--line-height);
+    font-weight: var(--text-body-small-medium--font-weight);
+  }
+
+  .text-body-small-semibold {
+    font-size: var(--text-body-small-semibold);
+    line-height: var(--text-body-small-semibold--line-height);
+    font-weight: var(--text-body-small-semibold--font-weight);
+  }
+
+  .text-extra-small-regular {
+    font-size: var(--text-extra-small-regular);
+    line-height: var(--text-extra-small-regular--line-height);
+    font-weight: var(--text-extra-small-regular--font-weight);
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-poppins, Arial, Helvetica, sans-serif);
+}
