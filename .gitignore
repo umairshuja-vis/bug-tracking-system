@@ -13,7 +13,7 @@
 /coverage
 
 # next.js
-/.next/
+*/.next/
 /out/
 
 # production
@@ -41,5 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 /seeders
-/uploads/*
+*/uploads/*
 !/uploads/

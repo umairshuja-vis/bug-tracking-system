@@ -1,7 +1,7 @@
 "use client"
 
 import { useProjects } from "@/hooks/useProjects"
-import { Card, Grid, Typography, CardActionArea, Box, InputAdornment, Pagination, TextField, Button, Divider } from '@mui/material'
+import { Card, Grid, CircularProgress, Typography, CardActionArea, Box, InputAdornment, Pagination, TextField, Button, Divider } from '@mui/material'
 import { useState } from "react"
 import Image from "next/image"
 import { useAuth } from "@/context/AuthContext"
@@ -21,8 +21,7 @@ export default function ProjectsPage() {
   const itemsPerPage = 6;
 
 
-
-  if ( loading ) return <p>Loading...</p>;
+  if ( loading ) return <Box sx={ { px: 15, py: 4 } }><CircularProgress size={ 40 } /></Box>
   if ( error ) return <p>Error: { error }</p>;
   if ( !isAuthenticated ) {
 
@@ -169,7 +168,7 @@ export default function ProjectsPage() {
           </Grid>
         ) ) }
       </Grid>
-      
+
       <Box sx={ { display: 'flex', justifyContent: 'center', mt: 4, alignItems: 'flex-end' } }>
         <Pagination
           count={ totalPages }

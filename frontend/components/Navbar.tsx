@@ -57,7 +57,7 @@ export default function Navbar() {
           bgcolor: '#FFFFFF',
           color: '#000000',
           boxShadow: '0 1px 3px rgba(0, 0, 0, 0.01)',
-          px: '16vw'
+          px: '16vw', pt: 1
         } }
       >
         <Toolbar sx={ { display: 'flex', justifyContent: 'space-between', } }>
@@ -111,10 +111,10 @@ export default function Navbar() {
             </Box>
           </Box>
 
-          <Box sx={ { display: 'flex', alignItems: 'center' } }>
+          <Box sx={ { display: 'flex', alignItems: 'center', bgcolor: '#F5F5F7', border: '1px solid #F5F5F7', borderRadius:'8px', p:1 } }>
             <IconButton
               onClick={ handleMenuOpen }
-              sx={ { p: 0, ml: 2 } }
+              sx={ { p: 0, ml: 1 } }
             >
               <Avatar
                 sx={ {
@@ -126,7 +126,7 @@ export default function Navbar() {
               >
                 { getAvatarLetter() }
               </Avatar>
-              <Typography variant="subtitle1" sx={ { ml: 1 } }>{ getFirstName() }</Typography>
+              <Typography sx={ { ml: 1, mt:0.3, fontSize: '16px', color: '#3B3F70' } }>{ getFirstName() }</Typography>
 
             </IconButton>
 

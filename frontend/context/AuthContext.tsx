@@ -34,25 +34,29 @@ export function AuthProvider( { children }: { children: ReactNode } ) {
 
 
   useEffect( () => {
-    const data = localStorage.getItem( 'access_token' );
-    const userData = localStorage.getItem( 'user' );
+    const restoreSession = () => {
+      const data = localStorage.getItem( 'access_token' );
+      const userData = localStorage.getItem( 'user' );
 
-    if ( data && userData ) {
-      try {
-        const parsedUser = JSON.parse( userData );
-        setUser( parsedUser );
-        setToken( data );
-        setIsAuthenticated( true );
-      } catch {
-        localStorage.removeItem( 'access_token' );
-        localStorage.removeItem( 'user' );
-        setIsAuthenticated( false );
-        router.push('/login')
+      if ( data && userData ) {
+        try {
+          const parsedUser = JSON.parse( userData );
+          setUser( parsedUser );
+          setToken( data );
+          setIsAuthenticated( true );
+        } catch {
+          localStorage.removeItem( 'access_token' );
+          localStorage.removeItem( 'user' );
+          setIsAuthenticated( false );
+          router.push('/login')
 
 
+        }
       }
-    }
-    setLoading( false );
+      setLoading( false );
+    };
+
+    restoreSession();
   }, [router] );
 
   const login = ( user_id: string, email: string, name: string, user_type: UserType, access_token: string ) => {

@@ -69,7 +69,7 @@ export function AddProject( { open, onClose, onSuccess }: ModalProps ) {
                 <Select
                   multiple
                   value={ formData.assignedUsers }
-                  onChange={ ( e ) => handleChange( 'assignedUsers', typeof e.target.value === 'string' ? [] : e.target.value ) }
+                  onChange={ ( e ) => handleChange( 'assignedUsers', e.target.value ) }
                   displayEmpty
                   renderValue={ ( selected ) => {
                     if ( allUsers.length === 0 ) return 'No users available'
